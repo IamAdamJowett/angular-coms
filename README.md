@@ -1,7 +1,7 @@
 angular-coms
 ============
 
-A simple communication service to allow easy passing of events (with data) around an angular application. Events are broadcast from the $rootScope, making it easy to listen to events from anywhere in the application.
+A communication service to allow easy passing and listening of events (with optionaldata) around an angular application. Events are broadcast from the $rootScope, making it easy to listen to events from anywhere in your application.
 
 ##Usage
 
@@ -14,9 +14,11 @@ Sending events are as easy as calling the `sendSignal` method. You pass the even
         console.log(dataObj);
     }, $scope);
     
-    Coms.sendSignal(Events.FOO_EVENT, fooVar);
-    Coms.onSignal(Events.FOO_EVENT, function (event, foo) {
-        console.log('FOO_EVENT received with fooVar value of: ' + foo);
+Sometimes with the async nature of AngularJS, you need to delay the sending of a call until something else is ready. This can be done as follows, in this case, delaying the sending of the event by 400ms:
+
+    Coms.sendSignal('signal:foo', 'random string', 400);
+    Coms.onSignal('signal:foo', function (event, data) {
+        console.log('I received the ' + data + ' after a 400ms delay');
     }, $scope);
 
 ####Listening for signals (events)
@@ -29,7 +31,7 @@ To listen for an event, you can use the onSignal method, which takes a signal st
     
 ####Deregistering event listeners
 
-Like native angular events, the `onSignal` method returns the de-registering function as part of the call. Simply assign this to a variable and you can call it late to manually remove a listener.
+Like native angular events, the `onSignal` method returns the de-registering function as part of the call. You can assign this to a variable and call it later to manually remove a listener. Listeners are de-registed automatically when the scope is destroyed as long as you pass the scope as the last parameter of the listener.
     
     var fooListener = Coms.onSignal(Events.FOO_EVENT, function (event, data) {
         console.log('FOO_EVENT received with fooVar value of: ' + data);
