@@ -30,7 +30,7 @@
  */
 (function () {
     angular
-        .module('angular.coms', [])
+        .module('angular-coms', [])
         .factory('Coms', ['$rootScope', '$timeout', Coms]);
 
     function Coms($rootScope, $timeout) {
