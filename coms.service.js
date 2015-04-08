@@ -29,7 +29,7 @@
  * @return      {Object}
  */
 angular
-.module('coms', [])
+.module('angular.coms', [])
 .factory('Coms', ['$rootScope', '$timeout', Coms]);
 
 function Coms($rootScope, $timeout) {

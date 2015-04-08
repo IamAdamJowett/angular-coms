@@ -1,0 +1,21 @@
+{
+  "name": "angular-coms",
+  "version": "1.0.0",
+  "main": "coms.service.js",
+  "homepage": "https://github.com/IamAdamJowett/angular-coms",
+  "authors": [
+    "IamAdamJowett"
+  ],
+  "description": "A simple communication service to allow easy passing of events around an angular application.",
+  "keywords": [
+    "angular",
+    "coms",
+    "signals"
+  ],
+  "license": "MIT",
+  "ignore": [],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/IamAdamJowett/angular-coms"
+  }
+}
