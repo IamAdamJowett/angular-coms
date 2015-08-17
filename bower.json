@@ -10,7 +10,8 @@
   "keywords": [
     "angular",
     "coms",
-    "signals"
+    "signals",
+    "events"
   ],
   "license": "MIT",
   "ignore": [],
