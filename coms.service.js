@@ -15,7 +15,7 @@
  *          console.log('I received the ' + data + ' after a 400ms delay');
  *      }, $scope);
  *
- * @module      coms
+ * @module      angular-coms
  *
  * @class       Coms
  * @constructor
