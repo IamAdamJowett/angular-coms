@@ -9,7 +9,7 @@ There are two easy ways to install the Coms service:
 
 ####npm
 
-    npm install @iamadamjowett/angular-click-outside
+    npm install @iamadamjowett/angular-coms
 
 #### Bower
 
