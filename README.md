@@ -1,5 +1,4 @@
-angular-coms
-============
+#angular-coms
 
 A communication service to allow easy passing and listening of events (with optionaldata) around an angular application. Events are broadcast from the $rootScope, making it easy to listen to events from anywhere in your application.
 
