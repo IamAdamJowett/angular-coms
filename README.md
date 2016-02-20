@@ -7,6 +7,10 @@ A communication service to allow easy passing and listening of events (with opti
 
 There are two easy ways to install the Coms service:
 
+####npm
+
+    npm install @iamadamjowett/angular-click-outside
+
 #### Bower
 
 To install via Bower, run:
